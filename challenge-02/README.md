@@ -4,35 +4,34 @@ Nesse exercício, você está livre para escolher os nomes para suas variáveis 
 
 ```js
 // Crie uma função que receba dois argumentos e retorne a soma dos mesmos.
-function soma(n1, n2) {
-    return n1 + n2;
+function soma(x, y) {
+  return x + y;
 }
 
 // Declare uma variável que receba a invocação da função criada acima, passando dois números quaisquer por argumento, e somando `5` ao resultado retornado da função.
-var total = soma(2, 1) + 5;
+var total = soma(2, 2) + 5;
 
 // Qual o valor atualizado dessa variável?
-8
+9
 
 // Declare uma nova variável, sem valor.
-var challenge;
+var newVar;
 
 /*
 Crie uma função que adicione um valor à variável criada acima, e retorne a string:
     O valor da variável agora é VALOR.
 Onde VALOR é o novo valor da variável.
 */
-function novo_valor() {
-    challenge = 20;
-    return 'O valor da variável agora é ' + challenge;
+function funcNewVar() {
+  newVar = 5;
+  return 'O valor da variável agora é ' + newVar;
 }
 
 // Invoque a função criada acima.
-challenge = novo_valor();
+funcNewVar();
 
 // Qual o retorno da função? (Use comentários de bloco).
-/** O retorno da função é a string O valor da variável agora é 10 */
-
+/* O valor da variável agora é 5 */
 
 /*
 Crie uma função com as seguintes características:
@@ -41,25 +40,25 @@ Crie uma função com as seguintes características:
     Preencha todos os valores corretamente!
 3. O retorno da função deve ser a multiplicação dos 3 argumentos, somando `2` ao resultado da multiplicação.
 */
-function multiplicacao(n1, n2, n3) {
-    if(n1 === undefined || n2 === undefined || n3 === undefined) {
-        return 'Preencha todos os valores corretamente!';
-    }
+function somaMult(x, y, z) {
+  if (x === undefined || y === undefined || z === undefined) {
+    return 'Preencha todos os valores corretamente!';
+  }
 
-    return n1 * n2 * n3 + 2;
+  return x * y * z + 2;
 }
 
 // Invoque a função criada acima, passando só dois números como argumento.
-multiplicacao(1, 2);
+somaMult(1, 2);
 
 // Qual o resultado da invocação acima? (Use comentários para mostrar o valor retornado).
-// o retorno será Preencha todos os valores corretamente!
+// Preencha todos os valores corretamente!
 
 // Agora invoque novamente a função criada acima, mas passando todos os três argumentos necessários.
-multiplicacao(2, 3, 1);
+somaMult(1, 2, 3);
 
 // Qual o resultado da invocação acima? (Use comentários para mostrar o valor retornado).
-8
+// 8
 
 /*
 Crie uma função com as seguintes características:
@@ -70,23 +69,23 @@ Crie uma função com as seguintes características:
 5. Se nenhum argumento for passado, retorne o valor booleano `false`.
 6. E ainda, se nenhuma das condições acima forem atendidas, retorne `null`.
 */
-function valores(n1, n2, n3) {
-    if(n1 === undefined && n2 === undefined && n3 === undefined) {
-        return false;
-    } else if (n1 !== undefined && n2 === undefined && n3 === undefined) {
-        return n1;
-    } else if (n1 !== undefined && n2 !== undefined && n3 === undefined) {
-        return n1 + n2;
-    } else if (n1 !== undefined && n2 !== undefined && n3 !== undefined) {
-        return (n1 + n2) / n3;
-    } else {
-        return null;
-    }
+function checkParams(x, y, z) {
+  if (x === undefined && y === undefined && z === undefined) {
+    return false;
+  } else if (x !== undefined && y === undefined && z === undefined) {
+    return x;
+  } else if (x !== undefined && y !== undefined && z === undefined) {
+    return x + y;
+  } else if (x !== undefined && y !== undefined && z !== undefined) {
+    return (x + y) / z;
+  } else {
+    return null;
+  }
 }
 
 // Invoque a função acima utilizando todas as possibilidades (com nenhum argumento, com um, com dois e com três.) Coloque um comentário de linha ao lado da função com o resultado de cada invocação.
-valores(); // false
-valores(2); // 2
-valores(2, 4); // 6
-valores(2, 4, 6); // 1
+checkParams(); // false
+checkParams(1); // 1
+checkParams(1, 2); // 3
+checkParams(1, 2, 3); // 1
 ```
